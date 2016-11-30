@@ -1,0 +1,2 @@
+DELETE FROM vehicles
+WHERE id = CAST($1 AS INT);
