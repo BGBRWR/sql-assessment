@@ -68,8 +68,8 @@ app.get('/api/user/:userId/vehicle', function(req, res) {
 });
 
 app.get('/api/vehicle', function(req, res) {
-    if (req.query.email) {
-        db.get_vehicles_by_email([req.query.email], function(err, success) {
+    if (req.query.UserEmail) {
+        db.get_vehicles_by_email([req.query.UserEmail], function(err, success) {
             res.status(200).json(success);
         })
     }
