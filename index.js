@@ -57,7 +57,7 @@ app.post('/api/vehicles', function(req, res) {
 
 app.get('/api/user/:userId/vehiclecount', function(req, res) {
     db.get_vehicle_count([req.params.userId], function(err, success) {
-        res.status(200).json(success);
+        res.status(200).json(success[0]);
     })
 });
 
